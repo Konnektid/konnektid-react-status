@@ -1,0 +1,39 @@
+{
+  "name": "konnektid-react-status",
+  "version": "0.0.1",
+  "description": "Set the HTTP status code from inside React components",
+  "author": "Tijn Kersjes <tijn@divbyzero.nl>",
+  "main": "dist/index.js",
+  "scripts": {
+    "clean": "git clean -dfX",
+    "build": "babel src --ignore __test__ --out-dir dist",
+    "watch": "babel src --ignore __test__ --watch --out-dir dist",
+    "postinstall": "npm run build",
+    "test": "babel-node node_modules/.bin/babel-istanbul cover --root src/ --include-all-sources _mocha -- --recursive $(find src -name __test__ -not -path '*/node_modules/*')",
+    "check-coverage": "babel-istanbul check-coverage --statements 80 --branches 70 --functions 60"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Konnektid/konnektid-react-status.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Konnektid/konnektid-react-status/issues"
+  },
+  "homepage": "https://github.com/Konnektid/konnektid-react-status#readme",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "babel-cli": "^6.6.5",
+    "babel-preset-konnektid": "github:konnektid/babel-preset-konnektid",
+    "react-side-effect": "^1.0.2"
+  },
+  "peerDependencies": {
+    "react": "^15.0.0"
+  },
+  "devDependencies": {
+    "babel-istanbul": "^0.7.0",
+    "chai": "^3.3.0",
+    "mocha": "^2.3.3",
+    "react": "^15.0.0"
+  }
+}
