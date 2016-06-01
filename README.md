@@ -1,4 +1,4 @@
-# konnektid-react-status
+# konnektid-react-status [![Build Status](https://travis-ci.org/Konnektid/konnektid-react-status.svg?branch=master)](https://travis-ci.org/Konnektid/konnektid-react-status)
 
 Set the HTTP status code from inside react components
 
